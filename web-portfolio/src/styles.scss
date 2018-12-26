@@ -1,0 +1,8 @@
+// Code to help Bootstrap, Angular, and Material to play nice
+@import "styles-variables";
+@import "styles-reset";
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
