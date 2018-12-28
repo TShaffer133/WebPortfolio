@@ -5,4 +5,12 @@
 @import '~bootstrap/scss/bootstrap-reboot';
 @import '~bootstrap/scss/bootstrap-grid';
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// Only include once per project
+@import '~@angular/material/theming';
+@import "default-blue-pink-theme.scss";
+@include mat-core($custom-typography);
+
+// specifies theme class
+.default-theme{
+  @include angular-material-theme($default-theme);
+}
