@@ -1,30 +1,30 @@
-<div class='default-theme'>
+<div class='default-theme theme-wrapper'>
 
   <mat-sidenav-container>
-
-    <mat-sidenav mode="push">
-      <div class="brand"><!-- Insert Logo Here --><p>"Title"</p></div>
+    <mat-sidenav #sidenav mode="push">
+      <div class="brand"><!-- Insert Logo Here --><span>"Title"</span></div>
       <mat-nav-list>
-        <a mat-list-item *ngFor="let item of navigation" (click)="sidenav.close()" [routerLink] = "[item.link]"
-        routerLinkActive="active">
-        {{item.label}}
+        <a mat-list-item *ngFor="let item of navigation" (click)="sidenav.close()" href="[item.link]" routerLinkActive="active">> {{item.label}} </a>
+        <a mat-list-item href="https://github.com/tomastrajan/angular-ngrx-material-starter" target="_blank">
+          Github
         </a>
       </mat-nav-list>
-
     </mat-sidenav>
 
+    <mat-sidenav-content>
     <div class="wrapper">
-      <div class="toolbar" [style.position]="(stickyHeader$) ? 'fixed' : 'inherit'" [class.mat-elevation-z4="(stickyHeader$)"]>
+
+      <div class="toolbar" [style.position]="fixed">
         <mat-toolbar color="primary">
-          <button mat-icon-button (click)="sidenav.open()"><!-- Insert Sidenav Icon Here --></button>
+          <button mat-icon-button class="d-md-none" (click)="sidenav.open()"><fa-icon icon="bars"></fa-icon></button>
 
           <!-- Formating for windowed then full versions -->
-          <span class=brand"><!-- Insert logo here -->
+          <span class="brand spacer center d-inline d-sm-none"><!-- Insert logo here -->
           "Title"</span>
-          <span class="brand"><!-- Insert logo here -->"Title"</span>
+          <span class="brand spacer center d-none d-sm-inline d-md-none"><!-- Insert logo here -->"Title"</span>
 
-          <span>
-            <button mat-button class="nav-button" *ngFor="let item of navigation" [routerLink]="[item.link]" routerLinkActive="active">
+          <span class="d-none d-md-inline">
+            <button mat-button class="nav-button" *ngFor="let item of navigation" href="[item.link]" routerLinkActive="active">
               {{item.label}}
             </button>
           </span>
@@ -32,7 +32,30 @@
           <!-- Continue at github component of bar -->
         </mat-toolbar>
       </div>
+
     </div>
+
+    <section class="container content default-theme">
+      <div class="row">
+        <mat-card class="col-md-6">
+          <mat-card-header>
+            <mat-card-title>The Beginning of a Beautiful Friendship</mat-card-title>
+            <mat-card-subtitle>Famous movie quotes</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              Blahblahblah.
+              </p>
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="col-md-6">2</mat-card>
+        <mat-card class="col-md-6 d-block d-lg-none">3</mat-card> <!-- will be hidden on large screens -->
+        <mat-card class="col-md-6 d-block d-lg-none">4</mat-card>
+      </div>
+    </section>
+
+    </mat-sidenav-content>
 
   </mat-sidenav-container>
 
