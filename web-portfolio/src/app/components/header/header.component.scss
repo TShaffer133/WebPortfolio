@@ -1,4 +1,12 @@
 @import '../../../styles-variables';
+
+//Bandaid content padding-top
+.content {
+  flex: 1 0 auto;
+  margin-top: 64px;
+  overflow: hidden;
+}
+
 .theme-wrapper {
   height: 100%;
   width: 100%;
