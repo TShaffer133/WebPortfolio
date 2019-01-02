@@ -1,74 +1,32 @@
-<div class='default-theme theme-wrapper'>
+  <div class="wrapper">
 
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="push">
-      <div class="brand"><!-- Insert Logo Here --><span>"Title"</span></div>
-      <mat-nav-list>
-        <a mat-list-item *ngFor="let item of navigation" (click)="sidenav.close()" href="[item.link]" routerLinkActive="active">> {{item.label}} </a>
-        <a mat-list-item href="https://github.com/tomastrajan/angular-ngrx-material-starter" target="_blank">
-          Github
+    <div class="toolbar" [style.position]="fixed">
+      <mat-toolbar color="primary">
+        <button mat-icon-button class="d-md-none" (click)="onOpenSideNav()"><fa-icon icon="bars"></fa-icon></button>
+
+        <!-- Formating for windowed then full versions -->
+        <span class="brand spacer center d-inline d-sm-none"><!-- Insert logo here -->
+        Correlate</span>
+        <span class="brand spacer center d-none d-sm-inline d-md-none"><!-- Insert logo here -->Correlate</span>
+        <span class="brand spacer d-none d-md-inline"><!-- Insert Logo here --> Correlate</span>
+
+        <span class="d-none d-md-inline">
+          <button mat-button class="nav-button" *ngFor="let item of navigation" href=[item.link] routerLinkActive="active">
+            {{item.label}}
+          </button>
+        </span>
+
+        <!-- Substitute actual Github repo -->
+        <a [matTooltip]="Github"
+           matTooltipPosition="before"
+           mat-icon-button
+           class="link d-none d-sm-inline"
+           href="https://github.com/tomastrajan/angular-ngrx-material-starter"
+           target="_blank">
+          <fa-icon [icon]="['fab','github']"></fa-icon>
         </a>
-      </mat-nav-list>
-    </mat-sidenav>
 
-    <mat-sidenav-content>
+       </mat-toolbar>
+     </div>
 
-      <div class="wrapper">
-
-        <div class="toolbar" [style.position]="fixed">
-          <mat-toolbar color="primary">
-            <button mat-icon-button class="d-md-none" (click)="sidenav.open()"><fa-icon icon="bars"></fa-icon></button>
-
-            <!-- Formating for windowed then full versions -->
-            <span class="brand spacer center d-inline d-sm-none"><!-- Insert logo here -->
-            "Title"</span>
-            <span class="brand spacer center d-none d-sm-inline d-md-none"><!-- Insert logo here -->"Title"</span>
-            <span class="brand spacer d-none d-md-inline"><!-- Insert Logo here --> "Title"</span>
-
-            <span class="d-none d-md-inline">
-              <button mat-button class="nav-button" *ngFor="let item of navigation" href="[item.link]" routerLinkActive="active">
-                {{item.label}}
-              </button>
-            </span>
-
-            <!-- Substitute actual Github repo -->
-            <a [matTooltip]="Github"
-               matTooltipPosition="before"
-               mat-icon-button
-               class="link d-none d-sm-inline"
-               href="https://github.com/tomastrajan/angular-ngrx-material-starter"
-               target="_blank">
-              <fa-icon [icon]="['fab','github']"></fa-icon>
-            </a>
-
-           </mat-toolbar>
-         </div>
-
-      </div>
-
-      <!-- Main content section, belongs in app root? -->
-        <section class="container content default-theme">
-          <div class="row">
-            <mat-card class="col-md-6">
-              <mat-card-header>
-                <mat-card-title>The Beginning of a Beautiful Friendship</mat-card-title>
-                <mat-card-subtitle>Famous movie quotes</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  Blahblahblah.
-                  </p>
-              </mat-card-content>
-            </mat-card>
-
-            <mat-card class="col-md-6">2</mat-card>
-            <mat-card class="col-md-6 d-block d-lg-none">3</mat-card> <!-- will be hidden on large screens -->
-            <mat-card class="col-md-6 d-block d-lg-none">4</mat-card>
-          </div>
-        </section>
-
-    </mat-sidenav-content>
-
-  </mat-sidenav-container>
-
-</div>
+  </div>

@@ -1,7 +1,43 @@
 @import '../styles-variables';
 
+//Bandaid content padding-top
 .content {
   flex: 1 0 auto;
   margin-top: 64px;
   overflow: hidden;
+}
+
+.theme-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+mat-sidenav-container {
+  height: 100%;
+  width: 100%;
+
+  mat-sidenav {
+    width: 250px;
+
+    .brand {
+      height: 64px;
+      padding: 8px 10px;
+      font-size: 20px;
+      font-weight: 500;
+
+      img {
+        height: 48px;
+        margin: 2px 10px 0 0;
+      }
+
+      span {
+        position: relative;
+        top: 3px;
+      }
+    }
+
+    .mat-nav-list {
+      padding-top: 0;
+    }
+  }
 }

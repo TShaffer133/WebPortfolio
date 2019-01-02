@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'abe-header',
@@ -8,14 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   //Insert logo image Here
   navigation = [
-    { link: 'about', label: 'about'},
-    { link: 'features', label: 'features' },
-    { link: 'examples', label: 'examples' },
+    { link: 'about', label: 'About'},
+    { link: 'portfolio', label: 'Portfolio' },
+    { link: 'blog', label: 'Blog' },
   ];
+
+  @Output() public openSideNav = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public onOpenSideNav = () => {
+    this.openSideNav.emit();
   }
 
 }
