@@ -1,11 +1,55 @@
 <div class="background">
   <div class="gradient">
     <div class="container">
-      <h1>Greetings Human</h1>
-      <h2>My Name is Tyrone</h2>
-      <h2>Feed Me Your Data.</h2> 
+      <h1 style="color:#067bc1;">Greetings.</h1>
+      <h2 style="color:#c42157; text-align: center;">I tell stories with your data.</h2>
+      <h2 style="color:#26a69a; text-align: center; padding-bottom: 50px;">Here are a few of my favorites.</h2>
     </div>
-
-    <div class="get-started"></div>
   </div>
 </div>
+
+<section class="code">
+  <div class="container-fluid">
+    <div class="row gutters">
+
+      <div class="col-8">
+
+        <h2 style="color:#f8fbfd; padding-left: 50px;">Code</h2>
+
+        <div class="row gutters align-items-end">
+          <div *ngFor="let project of code" class="col-md-6 col-lg-4 project-card">
+            <mat-card>
+              <mat-card-title>
+                {{project.title}}
+              </mat-card-title>
+              <mat-card-subtitle>
+                {{project.description}}
+              </mat-card-subtitle>
+            </mat-card>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-4">
+        <mat-card style="padding-top:25px;">
+          <mat-card-title>
+            My Profiencies in Make Computer Beep-Boop
+          </mat-card-title>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="correlate">
+  <div class="container-fluid">
+    <h2 style="color:#f8fbfd; padding-right: 50px;">Correlate</h2>
+  </div>
+</section>
+
+<section class="collaborate">
+  <div class="container-fluid">
+    <h2 style="color:#f8fbfd; padding-left: 50px;">Collaborate</h2>
+  </div>
+</section>

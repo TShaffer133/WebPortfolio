@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  code = [
+    { title: 'Perceptron', description: 'About'},
+    { title: 'mARkit', description: 'Portfolio' },
+    { title: 'This Website', description: 'Blog' },
+  ];
+
   constructor() { }
 
   ngOnInit() {
