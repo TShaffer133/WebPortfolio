@@ -10,13 +10,84 @@
 
 <section class="code">
   <div class="container-fluid">
+
+    <div class="row gutters">
+
+      <div class="col-8">
+        <h2 class="left-section-title">Code</h2>
+        <div class="row gutters align-items-end" style="padding-left:50px;">
+          <div *ngFor="let project of code" class="col-md-6 col-lg-4 project-card">
+            <mat-card>
+              <mat-card-title>
+                {{project.title}}
+              </mat-card-title>
+              <mat-card-subtitle>
+                {{project.description}}
+              </mat-card-subtitle>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+<!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
+      <div class="col-4">
+        <mat-card style="margin: 20px 0 20px 30px; min-height:350px;">
+          <mat-card-title>
+            Core Competencies
+          </mat-card-title>
+          <img mat-card-image src='../../../assets/graphTest.png' alt="BigBoyTest"/>
+        </mat-card>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="correlate">
+  <div class="container-fluid">
+    <div class="row gutters">
+
+<!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
+      <div class="col-4">
+        <mat-card style="margin: 20px 30px 20px 0; min-height: 350px;">
+          <mat-card-title>
+            Core Competencies
+          </mat-card-title>
+          <img mat-card-image src='../../../assets/graphTest.png' alt="BigBoyTest"/>
+        </mat-card>
+      </div>
+
+      <div class="col-8">
+        <h2 class="right-section-title">Correlate</h2>
+        <div class="row gutters align-items-end" style="padding-left:50px;">
+          <div *ngFor="let project of code" class="col-md-6 col-lg-4 project-card">
+            <mat-card>
+              <mat-card-title>
+                {{project.title}}
+              </mat-card-title>
+              <mat-card-subtitle>
+                {{project.description}}
+              </mat-card-subtitle>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="collaborate">
+  <div class="container-fluid">
     <div class="row gutters">
 
       <div class="col-8">
 
-        <h2 style="color:#f8fbfd; padding-left: 50px;">Code</h2>
+        <h2 class="left-section-title">Collaborate</h2>
 
-        <div class="row gutters align-items-end">
+        <div class="row gutters align-items-end" style="padding-left:50px;">
           <div *ngFor="let project of code" class="col-md-6 col-lg-4 project-card">
             <mat-card>
               <mat-card-title>
@@ -31,25 +102,16 @@
 
       </div>
 
+<!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
       <div class="col-4">
-        <mat-card style="padding-top:25px;">
+        <mat-card style="margin-top:20px; margin-bottom:20px; min-height: 350px;">
           <mat-card-title>
-            My Profiencies in Make Computer Beep-Boop
+            Core Competencies
           </mat-card-title>
+          <img mat-card-image src='../../../assets/graphTest.png' alt="BigBoyTest"/>
         </mat-card>
       </div>
+
     </div>
-  </div>
-</section>
-
-<section class="correlate">
-  <div class="container-fluid">
-    <h2 style="color:#f8fbfd; padding-right: 50px;">Correlate</h2>
-  </div>
-</section>
-
-<section class="collaborate">
-  <div class="container-fluid">
-    <h2 style="color:#f8fbfd; padding-left: 50px;">Collaborate</h2>
   </div>
 </section>
