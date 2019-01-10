@@ -52,9 +52,10 @@ h2 {
 }
 
 .project-card {
+
   .mat-card{
-    margin: 0 20px 20px 0;
     max-width: 325px;
+    margin: 0 20px 20px 0;
 
     .mat-card-actions{
       margin-bottom: 0;
@@ -73,6 +74,10 @@ h2 {
       left: 5px;
       }
     }
+
+    .mat-card-image{
+      height: 100%;
+    }
   }
 }
 
@@ -80,7 +85,7 @@ h2 {
   text-align: left;
 
   .container-fluid {
-    background: url('../../../assets/code.png') no-repeat center top
+    background: url('../../../assets/code.png') center top
   }
 }
 
@@ -88,7 +93,7 @@ h2 {
   text-align: right;
 
   .container-fluid {
-    background: url('../../../assets/correlate.png') no-repeat center top
+    background: url('../../../assets/correlate.png') center top
   }
 
   .h2 {
@@ -107,7 +112,7 @@ h2 {
   text-align: left;
 
   .container-fluid {
-    background: url('../../../assets/collaborate.png') no-repeat center top;
+    background: url('../../../assets/collaborate.png') center top;
   }
 }
 

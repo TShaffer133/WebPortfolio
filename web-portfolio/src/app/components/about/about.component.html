@@ -13,10 +13,10 @@
 
     <div class="row gutters">
 
-      <div class="col-sm-6 col-md-8">
+      <div class="col-sm-6 col-md-6 col-lg-8">
         <h2 class="left-section-title">Code</h2>
         <div class="row gutters align-items-end" style="padding-left:50px;">
-          <div *ngFor="let project of code" class="col-xs-12 col-md-6 col-lg-4 project-card">
+          <div *ngFor="let project of code" class="col-sm-12 col-md-6 col-lg-4 project-card">
             <mat-card>
               <mat-card-title>{{project.title}}</mat-card-title>
               <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
@@ -36,15 +36,15 @@
       </div>
 
 <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
-      <div class="d-none d-sm-block col-sm-6 col-md-4">
+      <div class="col-sm-6 col-md-6 col-lg-4">
         <mat-card style="margin: 20px 0 20px 30px; min-height:350px;">
           <mat-card-title>
             Core Competencies
           </mat-card-title>
           <mat-card-subtitle>
-            "Success" that cannot be measured is equivalent to failure
+            A Non-Exhaustive List
           </mat-card-subtitle>
-          <span class="d-none d-xs-block d-md-none">
+          <span class="d-xs-block d-sm-block d-md-none">
             <img mat-card-image src='../../../assets/skillsSm.png'/>
           </span>
           <span class="d-none d-md-block d-xl-none">
