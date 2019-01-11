@@ -51,6 +51,31 @@ h2 {
   }
 }
 
+.container-fluid {
+  margin-bottom: 0;
+  text-align: left;
+
+  &.code {
+    background: url('../../../assets/code.png') center top;
+  }
+
+  &.correlate {
+    text-align: right;
+    background: url('../../../assets/correlate.png') center top;
+
+    .project-card {
+      .mat-card{
+        margin: 0 0px 20px 20px;
+      }
+    }
+
+  }
+
+  &.collaborate {
+    background: url('../../../assets/collaborate.png') center top;
+  }
+}
+
 .project-card {
 
   .mat-card{
@@ -81,53 +106,6 @@ h2 {
   }
 }
 
-.code {
-  text-align: left;
-
-  .container-fluid {
-    background: url('../../../assets/code.png') center top
-  }
-}
-
-.correlate {
-  text-align: right;
-
-  .container-fluid {
-    background: url('../../../assets/correlate.png') center top
-  }
-
-  .h2 {
-    padding-right:50px;
-    padding-bottom:20px;
-  }
-
-  .project-card {
-    .mat-card{
-      margin: 0 0px 20px 20px;
-    }
-  }
-}
-
-.collaborate {
-  text-align: left;
-
-  .container-fluid {
-    background: url('../../../assets/collaborate.png') center top;
-  }
-}
-
-.left-section-title {
-  padding-left:50px;
-  padding-bottom:20px;
-  color:#f8fbfd;
-}
-
-.right-section-title {
-  padding-right:50px;
-  padding-bottom:20px;
-  color:#f8fbfd;
-}
-
 .gutters {
   margin-right: 0;
   margin-left: 0;
@@ -139,22 +117,17 @@ h2 {
   }
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
-  .background {
-    .actions {
-      margin: 50px 0;
-    }
-    .get-started {
-      width: auto;
-    }
-  }
-  .follow-releases {
-    width: auto;
+.section-title {
+  color:#f8fbfd;
+  padding: 0 0 20px 50px;
 
-    img {
-      max-width: 100%;
-    }
+  &.right {
+    padding: 0 50px 20px 0;
   }
+}
+
+@media (max-width: map-get($grid-breakpoints, md)) {
+
 }
 
 @media (max-width: map-get($grid-breakpoints, sm)) {
@@ -162,7 +135,4 @@ h2 {
     padding: 40px 0 0 0;
   }
 
-  .follow-releases {
-    margin: 0 auto 40px auto;
-  }
 }

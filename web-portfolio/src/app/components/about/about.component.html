@@ -8,13 +8,12 @@
   </div>
 </div>
 
-<section class="code">
-  <div class="container-fluid">
+<div class="container-fluid code">
 
     <div class="row gutters">
 
       <div class="col-sm-6 col-md-6 col-lg-8">
-        <h2 class="left-section-title">Code</h2>
+        <h2 class="section-title">Code</h2>
         <div class="row gutters align-items-end" style="padding-left:50px;">
           <div *ngFor="let project of code" class="col-sm-12 col-md-6 col-lg-4 project-card">
             <mat-card>
@@ -28,7 +27,7 @@
                 </a>
               </mat-card-actions>
               <mat-card-footer>
-                <p style="text-align:center">Associated Buzzwords:<br> {{project.buzzwords}}</p>
+                <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
               </mat-card-footer>
             </mat-card>
           </div>
@@ -59,16 +58,13 @@
 
     </div>
 
-  </div>
+</div>
 
-</section>
-
-<section class="correlate">
-  <div class="container-fluid">
+<div class="container-fluid correlate">
     <div class="row gutters">
 
 <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
-      <div class="d-none d-sm-block col-sm-6 col-md-4">
+      <div class="d-none d-sm-block col-sm-6 col-md-6 col-lg-4">
         <mat-card style="margin: 20px 30px 20px 0; min-height: 350px;">
           <mat-card-title>
             Core Competencies
@@ -77,42 +73,62 @@
         </mat-card>
       </div>
 
-      <div class="col-sm-6 col-md-8">
-        <h2 class="right-section-title">Correlate</h2>
+      <div class="col-sm-6 col-md-6 col-lg-8">
+        <h2 class="section-title right">Correlate</h2>
         <div class="row gutters align-items-end" style="padding-left:50px;">
-          <div *ngFor="let project of code" class="col-xs-12 col-md-6 col-lg-4 project-card">
+          <div *ngFor="let project of correlate" class="col-sm-12 col-md-6 col-lg-4 project-card">
             <mat-card>
-              <mat-card-title>
-                {{project.title}}
-              </mat-card-title>
-              <mat-card-subtitle>
-                {{project.description}}
-              </mat-card-subtitle>
+              <mat-card-title>{{project.title}}</mat-card-title>
+              <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+              <mat-card-content>{{project.description}}</mat-card-content>
+              <img *ngIf="project.image" mat-card-image src={{project.image}} />
+              <mat-card-actions>
+                <a *ngIf="project.github" mat-icon-button href={{project.github}}>
+                  <fa-icon [icon]="['fab','github']"></fa-icon>
+                </a>
+              </mat-card-actions>
+              <mat-card-footer>
+                <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
+              </mat-card-footer>
             </mat-card>
           </div>
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
+      <!-- Mobile compatible placement of block -->
+      <div class="d-none d-xs-block d-sm-none col-sm-6 col-md-6 col-lg-4">
+        <mat-card style="margin: 20px 30px 20px 0; min-height: 350px;">
+          <mat-card-title>
+            Core Competencies
+          </mat-card-title>
+          <img mat-card-image src='../../../assets/graphTest.png' alt="BigBoyTest"/>
+        </mat-card>
+      </div>
 
-<section class="collaborate">
-  <div class="container-fluid">
+    </div>
+</div>
+
+<div class="container-fluid collaborate">
     <div class="row gutters">
 
       <div class="col-sm-6 col-md-8">
-        <h2 class="left-section-title">Collaborate</h2>
+        <h2 class="section-title">Collaborate</h2>
 
         <div class="row gutters align-items-end" style="padding-left:50px;">
-          <div *ngFor="let project of code" class="col-xs-12 col-md-6 col-lg-4 project-card">
+          <div *ngFor="let project of collaborate" class="col-xs-12 col-md-6 col-lg-4 project-card">
             <mat-card>
-              <mat-card-title>
-                {{project.title}}
-              </mat-card-title>
-              <mat-card-subtitle>
-                {{project.description}}
-              </mat-card-subtitle>
+              <mat-card-title>{{project.title}}</mat-card-title>
+              <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+              <mat-card-content>{{project.description}}</mat-card-content>
+              <img *ngIf="project.image" mat-card-image src={{project.image}} />
+              <mat-card-actions>
+                <a *ngIf="project.github" mat-icon-button href={{project.github}}>
+                  <fa-icon [icon]="['fab','github']"></fa-icon>
+                </a>
+              </mat-card-actions>
+              <mat-card-footer>
+                <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
+              </mat-card-footer>
             </mat-card>
           </div>
         </div>
@@ -130,5 +146,4 @@
       </div>
 
     </div>
-  </div>
-</section>
+</div>
