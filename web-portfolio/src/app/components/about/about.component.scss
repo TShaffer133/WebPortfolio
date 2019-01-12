@@ -15,45 +15,16 @@ h2 {
 	border: 0;
 }
 
-.background {
-  padding: 80px 0 0 0;
-  position: relative;
-
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: url('../../../assets/intro.png') no-repeat center top;
-    background-size: cover;
-    opacity: 0.7;
-    content: '';
-    z-index: 0;
-  }
-
-  .gradient {
-    &::before {
-      position: absolute;
-      top: 51%;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      content: '';
-      z-index: 0;
-    }
-  }
-
-  .container {
-    position: relative;
-    margin-bottom: 0;
-  }
-}
-
 .container-fluid {
   margin-bottom: 0;
   text-align: left;
+  vertical-align: top;
+
+  &.intro {
+    background: url('../../../assets/intro.png') center top;
+    padding: 80px 0 0 0;
+    text-align: center;
+  }
 
   &.code {
     background: url('../../../assets/code.png') center top;
@@ -74,6 +45,10 @@ h2 {
   &.collaborate {
     background: url('../../../assets/collaborate.png') center top;
   }
+}
+
+.row-shift {
+  padding-left: 50px;
 }
 
 .project-card {
@@ -106,6 +81,15 @@ h2 {
   }
 }
 
+.sidebar-card {
+  margin: 20px 0 20px 30px;
+  min-height:350px;
+
+  &.right {
+    margin: 20px 30px 20px 0;
+  }
+}
+
 .gutters {
   margin-right: 0;
   margin-left: 0;
@@ -126,13 +110,40 @@ h2 {
   }
 }
 
-@media (max-width: map-get($grid-breakpoints, md)) {
-
-}
-
 @media (max-width: map-get($grid-breakpoints, sm)) {
-  .background {
-    padding: 40px 0 0 0;
+  h1 {
+    font-size: 4em;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    margin: 0;
+    border: 0;
   }
 
+  h2 {
+    font-size: 3em;
+    padding: 0 0 20px 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .container-fluid {
+    &.intro {
+      padding: 40px 0 0 0;
+    }
+  }
+
+  .row-shift {
+    padding-left: 0px;
+  }
+
+  .section-title {
+    text-size: 4em;
+    text-align: center;
+    padding: 10px 0 20px 0;
+
+    &.right{
+      text-align: center;
+      padding: 10px 0 20px 0;
+    }
+  }
 }
