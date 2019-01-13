@@ -45,15 +45,15 @@ export class AboutComponent implements OnInit {
     image: '../../../assets/perceptronTest.png',
     description: 'Collected and studied four months of self-reported data on various metrics \
     to determine how to statistically and objectively maximize personal happiness',
-    buzzwords: 'AI, Machine Learning, Java',
+    buzzwords: 'Data Visualization, Python',
     github: "https://github.com/TShaffer133"},
 
-    { title: 'VR Avatar Survey',
+    { title: 'VR Sim Survey',
     subtitle: 'Data Analyst',
     image: '../../../assets/perceptronTest.png',
-    description: 'Created a Logistic Regression-based Perceptron that could \
-    categorize data into distinct subgroups e\.g\. legitimate vs spam mail',
-    buzzwords: 'AI, Machine Learning, Java',
+    description: 'Discovered discrepancies in playtime and avatar selection between genders \
+    by analyzing over 100 datalogs obtained from playtests, suggested actionable solutions',
+    buzzwords: 'Data Visualization, Python',
     github: "https://github.com/TShaffer133"},
   ]
 
