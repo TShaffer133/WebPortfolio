@@ -47,14 +47,17 @@ import {
   faLightbulb,
   faWindowMaximize,
   faStream,
-  faBook
+  faBook,
+  faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faMediumM,
   faTwitter,
   faInstagram,
-  faYoutube
+  faYoutube,
+  faKaggle,
+  faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 
 library.add(
@@ -85,7 +88,10 @@ library.add(
   faLightbulb,
   faWindowMaximize,
   faStream,
-  faBook
+  faBook,
+  faKaggle,
+  faExternalLinkAlt,
+  faLinkedin
 );
 
 

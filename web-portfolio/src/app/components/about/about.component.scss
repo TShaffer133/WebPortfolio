@@ -1,0 +1,153 @@
+@import '../../../styles-variables';
+
+h1 {
+  text-align: center;
+  font-size: 5em;
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+h2 {
+  font-size: 4em;
+  margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.container-fluid {
+  margin-bottom: 0;
+  text-align: left;
+  vertical-align: top;
+
+  &.intro {
+    background: url('../../../assets/intro.png') center top;
+    padding: 80px 0 0 0;
+    text-align: center;
+  }
+
+  &.code {
+    background: url('../../../assets/code.png') center top;
+  }
+
+  &.correlate {
+    text-align: right;
+    background: url('../../../assets/correlate.png') center top;
+
+    .project-card {
+      .mat-card{
+        margin: 0 0px 20px 20px;
+      }
+    }
+
+  }
+
+  &.collaborate {
+    background: url('../../../assets/collaborate.png') center top;
+  }
+}
+
+.row-shift {
+  padding-left: 50px;
+}
+
+.project-card {
+
+  .mat-card{
+    max-width: 325px;
+    margin: 0 20px 20px 0;
+
+    .mat-card-actions{
+      margin-bottom: 0;
+      padding-bottom: 0;
+      align-items: flex-end;
+
+      fa-icon{
+        position: relative;
+        font-size: 25px;
+      }
+
+      a[mat-icon-button] {
+      position: relative;
+      left: 5px;
+      }
+    }
+
+    .mat-card-image{
+      height: 100%;
+    }
+  }
+}
+
+.sidebar-card {
+  margin: 20px 0 20px 30px;
+  min-height:350px;
+
+  &.right {
+    margin: 20px 30px 20px 0;
+  }
+}
+
+.gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.section-title {
+  color:#f8fbfd;
+  padding: 0 0 20px 50px;
+
+  &.right {
+    padding: 0 50px 20px 0;
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+  .sidebar-card {
+    min-height: 850px;
+  }
+}
+
+@media (max-width: map-get($grid-breakpoints, sm)) {
+  h1 {
+    font-size: 4em;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    margin: 0;
+    border: 0;
+  }
+
+  h2 {
+    font-size: 3em;
+    padding: 0 0 20px 0;
+    margin: 0;
+    border: 0;
+  }
+
+  .container-fluid {
+    &.intro {
+      padding: 40px 0 0 0;
+    }
+  }
+
+  .row-shift {
+    padding-left: 0px;
+  }
+
+  .section-title {
+    text-size: 4em;
+    text-align: center;
+    padding: 10px 0 20px 0;
+
+    &.right{
+      text-align: center;
+      padding: 10px 0 20px 0;
+    }
+  }
+}

@@ -8,9 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   //Insert logo image Here
   navigation = [
-    { link: 'about', label: 'About'},
-    { link: 'portfolio', label: 'Portfolio' },
-    { link: 'blog', label: 'Blog' },
+    { link: 'about', label: 'Resume'},
   ];
 
   @Output() public openSideNav = new EventEmitter();

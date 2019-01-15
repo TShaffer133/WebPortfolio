@@ -2,10 +2,13 @@
 
   <mat-sidenav-container>
     <mat-sidenav #sidenav mode="push">
-      <div class="brand"><!-- Insert Logo Here --><span>Correlate</span></div>
+      <div class="brand"><!-- Insert Logo Here --><span>Tyrone Shaffer</span></div>
       <mat-nav-list class="default-theme">
         <a mat-list-item *ngFor="let item of navigation" (click)="sidenav.close()" href="[item.link]" routerLinkActive="active"> {{item.label}} </a>
-        <a mat-list-item href="https://github.com/tomastrajan/angular-ngrx-material-starter" target="_blank">
+        <a mat-list-item href="https://www.linkedin.com/in/tyrone-shaffer-3ab58510a/" target="_blank">
+          LinkedIn
+        </a>
+        <a mat-list-item href="https://github.com/TShaffer133/" target="_blank">
           Github
         </a>
       </mat-nav-list>
@@ -16,25 +19,7 @@
       <abe-header (openSideNav)="sidenav.open()"></abe-header>
 
       <!-- Main content section, belongs in app root? -->
-        <section class="container content default-theme">
-          <div class="row">
-            <mat-card class="col-md-6">
-              <mat-card-header>
-                <mat-card-title>The Beginning of a Beautiful Friendship</mat-card-title>
-                <mat-card-subtitle>Famous movie quotes</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  Blahblahblah.
-                  </p>
-              </mat-card-content>
-            </mat-card>
-
-            <mat-card class="col-md-6">2</mat-card>
-            <mat-card class="col-md-6 d-block d-lg-none">3</mat-card> <!-- will be hidden on large screens -->
-            <mat-card class="col-md-6 d-block d-lg-none">4</mat-card>
-          </div>
-        </section>
+      <abe-about></abe-about>
 
     </mat-sidenav-content>
 

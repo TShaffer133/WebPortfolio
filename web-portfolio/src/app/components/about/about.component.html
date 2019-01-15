@@ -1,3 +1,157 @@
-<p>
-  about works!
-</p>
+<div class="container-fluid intro">
+      <h1 style="color:#067bc1;">Greetings.</h1>
+      <h2 style="color:#c42157; text-align: center;">I tell stories with your data.</h2>
+      <h2 style="color:#26a69a; text-align: center; padding-bottom: 50px;">Here are a few of my favorites.</h2>
+</div>
+
+<div class="container-fluid code">
+  <div class="row gutters">
+    <div class="col-sm-6 col-md-6 col-lg-8">
+      <h2 class="section-title">Code</h2>
+      <div class="row gutters align-items-end" style="padding-left: 50px">
+        <div *ngFor="let project of code" class="col-sm-12 col-md-6 col-lg-4 project-card">
+          <mat-card>
+            <mat-card-title>{{project.title}}</mat-card-title>
+            <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+            <mat-card-content>{{project.description}}</mat-card-content>
+            <img *ngIf="project.image" mat-card-image src={{project.image}} />
+            <mat-card-actions>
+              <a *ngIf="project.github;else blank" mat-icon-button href={{project.github}}>
+                <fa-icon [icon]="['fab','github']"></fa-icon>
+              </a>
+              <ng-template #blank>
+                <fa-icon [icon]="['fab','github']" style="color:#FFF"></fa-icon>
+              </ng-template>
+            </mat-card-actions>
+            <mat-card-footer>
+              <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
+            </mat-card-footer>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+
+    <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
+    <div class="col-sm-6 col-md-6 col-lg-4">
+        <mat-card class="sidebar-card">
+          <mat-card-title>
+            Core Competencies
+          </mat-card-title>
+          <mat-card-subtitle>
+            A Non-Exhaustive List
+          </mat-card-subtitle>
+          <div class="d-xs-block d-sm-block d-md-none">
+            <img mat-card-image src='../../../assets/skillsSm.png'/>
+          </div>
+          <div class="d-none d-md-block d-xl-none">
+            <img mat-card-image src='../../../assets/skills.png'/>
+          </div>
+          <div class="d-none d-xl-block">
+            <img mat-card-image src='../../../assets/skillsLg.png'/>
+          </div>
+        </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid correlate">
+    <div class="row gutters">
+
+<!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
+      <div class="d-none d-sm-block col-sm-6 col-md-6 col-lg-4">
+        <mat-card class="sidebar-card right">
+          <mat-card-title>Frameworks Breakdown</mat-card-title>
+          <mat-card-subtitle>Some Tools I Have Used</mat-card-subtitle>
+          <img mat-card-image src='../../../assets/frameworks.png' alt="BigBoyTest"/>
+        </mat-card>
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-8">
+        <h2 class="section-title right">Correlate</h2>
+        <div class="row gutters align-items-end" style="padding-left: 50px">
+          <div *ngFor="let project of correlate" class="col-sm-12 col-md-6 col-lg-4 project-card">
+            <mat-card>
+              <mat-card-title>{{project.title}}</mat-card-title>
+              <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+              <mat-card-content>{{project.description}}</mat-card-content>
+              <img *ngIf="project.image" mat-card-image src={{project.image}} />
+              <mat-card-actions>
+                <a *ngIf="project.github;" mat-icon-button href={{project.github}}>
+                  <fa-icon [icon]="['fab','github']"></fa-icon>
+                </a>
+                <a *ngIf="project.kaggle;else blank" mat-icon-button href={{project.kaggle}}>
+                  <fa-icon [icon]="['fab','kaggle']"></fa-icon>
+                </a>
+                <ng-template #blank>
+                  <fa-icon [icon]="['fab','github']" style="color:#FFF"></fa-icon>
+                </ng-template>
+              </mat-card-actions>
+              <mat-card-footer>
+                <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile compatible placement of block -->
+      <div class="d-block d-sm-none col-xs-6">
+        <mat-card class="sidebar-card right">
+          <mat-card-title>Frameworks Breakdown</mat-card-title>
+          <mat-card-subtitle>Some Tools I Have Used</mat-card-subtitle>
+          <img mat-card-image src='../../../assets/frameworks.png' alt="BigBoyTest"/>
+        </mat-card>
+      </div>
+
+    </div>
+</div>
+
+<div class="container-fluid collaborate">
+    <div class="row gutters">
+
+      <div class="col-sm-6 col-md-6 col-lg-8">
+        <h2 class="section-title">Collaborate</h2>
+
+        <div class="row gutters align-items-end" style="padding-left: 50px">
+          <div *ngFor="let project of collaborate" class="col-xs-12 col-md-6 col-lg-4 project-card">
+            <mat-card>
+              <mat-card-title>{{project.title}}</mat-card-title>
+              <mat-card-subtitle>{{project.subtitle}}</mat-card-subtitle>
+              <mat-card-content>{{project.description}}</mat-card-content>
+              <img *ngIf="project.image" mat-card-image src={{project.image}} />
+              <mat-card-actions>
+                <a *ngIf="project.github;" mat-icon-button href={{project.github}}>
+                  <fa-icon [icon]="['fab','github']"></fa-icon>
+                </a>
+                <a *ngIf="project.link;else blank" mat-icon-button href={{project.link}}>
+                  <fa-icon icon="external-link-alt"></fa-icon>
+                </a>
+                <ng-template #blank>
+                  <fa-icon [icon]="['fab','github']" style="color:#FFF"></fa-icon>
+                </ng-template>
+              </mat-card-actions>
+              <mat-card-footer>
+                <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+        </div>
+
+      </div>
+
+<!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
+      <div class="col-sm-6 col-md-6 col-lg-4">
+        <mat-card class="sidebar-card">
+          <mat-card-title>Interests and Hobbies</mat-card-title>
+          <mat-card-subtitle>How I Spend My Time</mat-card-subtitle>
+          <div class="d-xs-block d-sm-block d-md-none">
+            <img mat-card-image src='../../../assets/interestsSm.png'/>
+          </div>
+          <div class="d-none d-md-block d-xl-block">
+          <img mat-card-image src='../../../assets/interests.png' alt="BigBoyTest"/>
+          </div>
+        </mat-card>
+      </div>
+
+    </div>
+</div>
