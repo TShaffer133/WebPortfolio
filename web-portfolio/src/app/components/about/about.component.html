@@ -16,9 +16,12 @@
             <mat-card-content>{{project.description}}</mat-card-content>
             <img *ngIf="project.image" mat-card-image src={{project.image}} />
             <mat-card-actions>
-              <a *ngIf="project.github" mat-icon-button href={{project.github}}>
+              <a *ngIf="project.github;else blank" mat-icon-button href={{project.github}}>
                 <fa-icon [icon]="['fab','github']"></fa-icon>
               </a>
+              <ng-template #blank>
+                <fa-icon [icon]="['fab','github']" style="color:#FFF"></fa-icon>
+              </ng-template>
             </mat-card-actions>
             <mat-card-footer>
               <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
@@ -73,9 +76,15 @@
               <mat-card-content>{{project.description}}</mat-card-content>
               <img *ngIf="project.image" mat-card-image src={{project.image}} />
               <mat-card-actions>
-                <a *ngIf="project.github" mat-icon-button href={{project.github}}>
+                <a *ngIf="project.github;" mat-icon-button href={{project.github}}>
                   <fa-icon [icon]="['fab','github']"></fa-icon>
                 </a>
+                <a *ngIf="project.kaggle;else blank" mat-icon-button href={{project.kaggle}}>
+                  <fa-icon [icon]="['fab','kaggle']"></fa-icon>
+                </a>
+                <ng-template #blank>
+                  <fa-icon [icon]="['fab','github']" style="color:#FFF"></fa-icon>
+                </ng-template>
               </mat-card-actions>
               <mat-card-footer>
                 <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
@@ -111,9 +120,15 @@
               <mat-card-content>{{project.description}}</mat-card-content>
               <img *ngIf="project.image" mat-card-image src={{project.image}} />
               <mat-card-actions>
-                <a *ngIf="project.github" mat-icon-button href={{project.github}}>
+                <a *ngIf="project.github;" mat-icon-button href={{project.github}}>
                   <fa-icon [icon]="['fab','github']"></fa-icon>
                 </a>
+                <a *ngIf="project.link;else blank" mat-icon-button href={{project.link}}>
+                  <fa-icon icon="external-link-alt"></fa-icon>
+                </a>
+                <ng-template #blank>
+                  <fa-icon [icon]="['fab','github']" style="color:#FFF"></fa-icon>
+                </ng-template>
               </mat-card-actions>
               <mat-card-footer>
                 <p style="text-align:center">Associated Skills:<br> {{project.buzzwords}}</p>
@@ -129,7 +144,12 @@
         <mat-card class="sidebar-card">
           <mat-card-title>Interests and Hobbies</mat-card-title>
           <mat-card-subtitle>How I Spend My Time</mat-card-subtitle>
-          <img mat-card-image src='../../../assets/graphTest.png' alt="BigBoyTest"/>
+          <div class="d-xs-block d-sm-block d-md-none">
+            <img mat-card-image src='../../../assets/interestsSm.png'/>
+          </div>
+          <div class="d-none d-md-block d-xl-block">
+          <img mat-card-image src='../../../assets/interests.png' alt="BigBoyTest"/>
+          </div>
         </mat-card>
       </div>
 

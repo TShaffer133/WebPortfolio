@@ -62,11 +62,9 @@ h2 {
       padding-bottom: 0;
       align-items: flex-end;
 
-      a {
-        fa-icon{
-          position: relative;
-          font-size: 25px;
-        }
+      fa-icon{
+        position: relative;
+        font-size: 25px;
       }
 
       a[mat-icon-button] {
@@ -112,7 +110,7 @@ h2 {
 
 @media (min-width: map-get($grid-breakpoints, xl)) {
   .sidebar-card {
-    min-height: 750px;
+    min-height: 850px;
   }
 }
 

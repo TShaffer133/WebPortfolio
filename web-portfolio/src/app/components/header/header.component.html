@@ -16,7 +16,16 @@
           </button>
         </span>
 
-        <!-- Substitute actual Github repo -->
+        <a [matTooltip]="LinkedIn"
+           matTooltipPosition="before"
+           mat-icon-button
+           class="link d-none d-sm-inline nav-button"
+           href="https://www.linkedin.com/in/tyrone-shaffer-3ab58510a/"
+           target="_blank"
+           style="padding-right: 15px">
+          <fa-icon [icon]="['fab','linkedin']"></fa-icon>
+        </a>
+
         <a [matTooltip]="Github"
            matTooltipPosition="before"
            mat-icon-button
