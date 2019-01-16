@@ -1,10 +1,10 @@
-<div class="container-fluid intro">
+<div @enterAnim class="container-fluid intro">
       <h1 style="color:#067bc1;">Greetings.</h1>
       <h2 style="color:#c42157; text-align: center;">I tell stories with your data.</h2>
       <h2 style="color:#26a69a; text-align: center; padding-bottom: 50px;">Here are a few of my favorites.</h2>
 </div>
 
-<div class="container-fluid code">
+<div @enterAnim class="container-fluid code">
   <div class="row gutters">
     <div class="col-sm-6 col-md-6 col-lg-8">
       <h2 class="section-title">Code</h2>
@@ -54,7 +54,7 @@
   </div>
 </div>
 
-<div class="container-fluid correlate">
+<div @enterAnim *ngIf='showCorrelate' class="container-fluid correlate">
     <div class="row gutters">
 
 <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
@@ -106,7 +106,7 @@
     </div>
 </div>
 
-<div class="container-fluid collaborate">
+<div @enterAnim *ngIf='showCollaborate' class="container-fluid collaborate">
     <div class="row gutters">
 
       <div class="col-sm-6 col-md-6 col-lg-8">

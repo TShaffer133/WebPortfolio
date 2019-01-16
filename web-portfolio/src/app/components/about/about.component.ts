@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, ElementRef, OnInit } from '@angular/core';
 import {
   animate,
   query,
@@ -6,8 +6,6 @@ import {
   transition,
   trigger,
   stagger,
-  state,
-  sequence
 } from '@angular/animations';
 
 import { Project, code, correlate, collaborate} from './about.data'
@@ -17,30 +15,38 @@ import { Project, code, correlate, collaborate} from './about.data'
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
   animations: [
-    trigger('childAnimation', [
-      // ...
-      state('open', style({
-        width: '250px',
-        opacity: 1,
-        backgroundColor: 'yellow'
-      })),
-      state('closed', style({
-        width: '100px',
-        opacity: 0.5,
-        backgroundColor: 'green'
-      })),
-      transition('* => *', [
-        animate('1s')
-      ]),
+    trigger('enterAnim', [
+      transition(':enter', [
+        query('div, h1, h2, .project-card, .sidebar-card', style({transform: 'translateY(-3%)', opacity: 0})),
+        query('div, h1, h2, .project-card, .sidebar-card', stagger(75, [
+          animate('0.75s ease-in-out', style({transform: 'translateY(0%)', opacity: 1}))
+        ]))
+      ])
     ]),
-  ],
+  ]
 })
 export class AboutComponent implements OnInit {
   code: Project[] = code;
   correlate: Project[] = correlate;
   collaborate: Project[] = collaborate;
 
-  constructor() { }
+  showCorrelate = false
+  showCollaborate = false
+
+  constructor(public el: ElementRef) { }
+
+//Implements show animation on scroll via hardcoded values. Alter to make dynamic.
+  @HostListener('window:scroll', ['$event'])
+    checkScroll(){
+      const scrollPosition = window.pageYOffset
+
+      if(scrollPosition >= 200) {
+        this.showCorrelate = true
+      }
+      if(scrollPosition >= 1100) {
+        this.showCollaborate = true
+      }
+    }
 
   ngOnInit() {
   }
