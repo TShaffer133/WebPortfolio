@@ -40,10 +40,10 @@ export class AboutComponent implements OnInit {
     checkScroll(){
       const scrollPosition = window.pageYOffset
 
-      if(scrollPosition >= 200) {
+      if(scrollPosition >= 300) {
         this.showCorrelate = true
       }
-      if(scrollPosition >= 1100) {
+      if(scrollPosition >= 1200) {
         this.showCollaborate = true
       }
     }

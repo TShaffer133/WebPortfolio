@@ -4,7 +4,7 @@
     <mat-sidenav #sidenav mode="push">
       <div class="brand"><!-- Insert Logo Here --><span>Tyrone Shaffer</span></div>
       <mat-nav-list class="default-theme">
-        <a mat-list-item *ngFor="let item of navigation" (click)="sidenav.close()" href="[item.link]" routerLinkActive="active"> {{item.label}} </a>
+        <a mat-list-item (click)="sidenav.close()" href="[item.link]" routerLinkActive="active" download> Resume </a>
         <a mat-list-item href="https://www.linkedin.com/in/tyrone-shaffer-3ab58510a/" target="_blank">
           LinkedIn
         </a>

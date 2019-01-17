@@ -16,7 +16,7 @@ export const code: Project[] = [
   description: 'Created a Logistic Regression-based Perceptron that could \
   categorize data into distinct subgroups e\.g\. legitimate vs spam mail',
   buzzwords: 'AI, Machine Learning, Java',
-  github: "https://github.com/TShaffer133"},
+  github: "https://github.com/TShaffer133/WekaLogisticPerceptron"},
 
   { title: 'mARkit: Mobile',
   subtitle: 'Project Lead',
@@ -53,7 +53,7 @@ export const correlate: Project[] = [
 
   { title: 'VR Sim Survey',
   subtitle: 'Data Analyst',
-  image: '../../../assets/perceptronTest.png',
+  image: '../../../assets/simSurvey.png',
   description: 'Discovered discrepancies in playtime and avatar selection between genders \
   by analyzing over 100 datalogs obtained from playtests, suggested actionable solutions',
   buzzwords: 'Data Visualization, Python'},

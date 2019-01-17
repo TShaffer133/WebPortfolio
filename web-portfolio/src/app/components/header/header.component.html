@@ -1,6 +1,6 @@
   <div class="wrapper">
 
-    <div class="toolbar" [style.position]="fixed">
+    <div class="toolbar" style="position:fixed">
       <mat-toolbar color="primary">
         <button mat-icon-button class="d-md-none" (click)="onOpenSideNav()"><fa-icon icon="bars"></fa-icon></button>
 
@@ -11,13 +11,12 @@
         <span class="brand spacer d-none d-md-inline"><!-- Insert Logo here --> Tyrone Shaffer</span>
 
         <span class="d-none d-md-inline">
-          <button mat-button class="nav-button" *ngFor="let item of navigation" href=[item.link] routerLinkActive="active">
-            {{item.label}}
-          </button>
+          <a mat-button class="nav-button" href=[item.link] download>
+            Resume
+          </a>
         </span>
 
-        <a [matTooltip]="LinkedIn"
-           matTooltipPosition="before"
+        <a
            mat-icon-button
            class="link d-none d-sm-inline nav-button"
            href="https://www.linkedin.com/in/tyrone-shaffer-3ab58510a/"
@@ -26,8 +25,7 @@
           <fa-icon [icon]="['fab','linkedin']"></fa-icon>
         </a>
 
-        <a [matTooltip]="Github"
-           matTooltipPosition="before"
+        <a 
            mat-icon-button
            class="link d-none d-sm-inline"
            href="https://github.com/TShaffer133/"
