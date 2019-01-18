@@ -16,7 +16,7 @@
             <mat-card-content>{{project.description}}</mat-card-content>
             <img *ngIf="project.image" mat-card-image src={{project.image}} />
             <mat-card-actions>
-              <a *ngIf="project.github;else blank" mat-icon-button href={{project.github}}>
+              <a *ngIf="project.github;else blank" mat-icon-button href={{project.github}} target="_blank">
                 <fa-icon [icon]="['fab','github']"></fa-icon>
               </a>
               <ng-template #blank>
@@ -76,10 +76,10 @@
               <mat-card-content>{{project.description}}</mat-card-content>
               <img *ngIf="project.image" mat-card-image src={{project.image}} />
               <mat-card-actions>
-                <a *ngIf="project.github;" mat-icon-button href={{project.github}}>
+                <a *ngIf="project.github;" mat-icon-button href={{project.github}} target="_blank">
                   <fa-icon [icon]="['fab','github']"></fa-icon>
                 </a>
-                <a *ngIf="project.kaggle;else blank" mat-icon-button href={{project.kaggle}}>
+                <a *ngIf="project.kaggle;else blank" mat-icon-button href={{project.kaggle}} target="_blank">
                   <fa-icon [icon]="['fab','kaggle']"></fa-icon>
                 </a>
                 <ng-template #blank>
@@ -120,10 +120,10 @@
               <mat-card-content>{{project.description}}</mat-card-content>
               <img *ngIf="project.image" mat-card-image src={{project.image}} />
               <mat-card-actions>
-                <a *ngIf="project.github;" mat-icon-button href={{project.github}}>
+                <a *ngIf="project.github;" mat-icon-button href={{project.github}} target="_blank">
                   <fa-icon [icon]="['fab','github']"></fa-icon>
                 </a>
-                <a *ngIf="project.link;else blank" mat-icon-button href={{project.link}}>
+                <a *ngIf="project.link;else blank" mat-icon-button href={{project.link}} target="_blank">
                   <fa-icon icon="external-link-alt"></fa-icon>
                 </a>
                 <ng-template #blank>

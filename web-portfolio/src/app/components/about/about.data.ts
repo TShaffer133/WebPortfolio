@@ -31,7 +31,7 @@ export const code: Project[] = [
   description: 'Architected a mobile ARG designed to encourage students to \
   walk around campus by connecting their movements \
   to the well-being of a virtual pet.',
-  buzzwords: 'Mapbox, Unity3D, Augmented Reality',
+  buzzwords: 'Mapbox, Augmented Reality',
   github: "https://github.com/evanjg/COP4331-G5"},
 ];
 
@@ -65,14 +65,14 @@ export const collaborate: Project[] = [
   image: '../../../assets/gdkGroupShot.jpg',
   description: 'Spearheaded a fundraising initiative that raised over $16,000 \
   to send members to the Game Developers Conference while hosting programming workshops',
-  buzzwords: 'Project Management, Unity3D, C#',
+  buzzwords: 'Project Management, Unity3D',
   link: 'https://gamedevknights.com/'
   },
 
   { title: 'Camp Connect',
   subtitle: 'Volunteer (2018)',
   image: '../../../assets/campConnectShot.jpg',
-  description: 'Supervised and assisted middle school students through several activities \
+  description: 'Supervised middle school students through several activities \
   such as designing wind-resistant structures to stimulate interest in various STEM disciplines',
   buzzwords: 'Public Speaking, Empathy',
   link: 'https://stem.ucf.edu/camp-connect/'
@@ -83,7 +83,7 @@ export const collaborate: Project[] = [
   image: '../../../assets/ggjSplash.png',
   description: 'Conceptualized and developed a 2D, isometric, tower-defense prototype within a 48 hour timeframe \
   with a rapidly-formed team of six members',
-  buzzwords: 'Project Management, Unity3D, C#',
+  buzzwords: 'Project Management, Unity3D',
   link: 'https://globalgamejam.org/2016/games/diet-exorcise'
   }
 ]
