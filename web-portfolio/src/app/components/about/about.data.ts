@@ -79,7 +79,7 @@ export const collaborate: Project[] = [
   },
 
   { title: 'Global Game Jam',
-  subtitle: 'Participant/Programmer (2016)',
+  subtitle: 'Programmer (2016)',
   image: '../../../assets/ggjSplash.png',
   description: 'Conceptualized and developed a 2D, isometric, tower-defense prototype within a 48 hour timeframe \
   with a rapidly-formed team of six members',
