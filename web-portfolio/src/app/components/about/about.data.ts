@@ -10,13 +10,13 @@ export interface Project {
 }
 
 export const code: Project[] = [
-  { title: 'Logistic Perceptron',
-  subtitle: 'Programmer',
-  image: '../../../assets/perceptronTest.png',
-  description: 'Created a Logistic Regression-based Perceptron that could \
-  categorize data into distinct subgroups e\.g\. legitimate vs spam mail',
-  buzzwords: 'AI, Machine Learning, Java',
-  github: "https://github.com/TShaffer133/WekaLogisticPerceptron"},
+  { title: 'Sea Turtle Identifier',
+  subtitle: 'Software Engineer',
+  image: '../../../assets/turtleRecog.JPG',
+  description: 'Implemented real-time object detection AI via TensorFlow to help \
+  conservationists monitor sea turtle populations with drones and IoT technology',
+  buzzwords: 'Machine Learning, Python',
+  },
 
   { title: 'mARkit: Mobile',
   subtitle: 'Project Lead',
@@ -32,17 +32,25 @@ export const code: Project[] = [
   walk around campus by connecting their movements \
   to the well-being of a virtual pet.',
   buzzwords: 'Mapbox, Augmented Reality',
-  github: "https://github.com/evanjg/COP4331-G5"},
+  github: 'https://github.com/evanjg/COP4331-G5'},
 ];
 
 export const correlate: Project[] = [
+  { title: 'Job Posting Analysis',
+  subtitle: 'Data Analyst',
+  image: '../../../assets/citySalaries.PNG',
+  description: 'Awarded $1500 for analyzing over 600 job postings \
+  provided by the city of Los Angeles for biased language and providing recommendations to improve diversity',
+  buzzwords: 'Data Visualization, Python',
+  kaggle: 'https://www.kaggle.com/filthyilliterate/phrasing-improving-diversity-through-formatting'},
+
   { title: 'Kaggle DS Survey',
   subtitle: 'Data Analyst',
   image: '../../../assets/kaggleChloro.png',
   description: 'Analyzed over 23,000 survey responses aggregated by Kaggle \
   to discover the discrepancies between students and working professionals in Data Science',
   buzzwords: 'Data Visualization, Python',
-  kaggle: "https://www.kaggle.com/filthyilliterate/transitioning-from-academia-to-industry"},
+  kaggle: 'https://www.kaggle.com/filthyilliterate/transitioning-from-academia-to-industry'},
 
   { title: 'Happiness Study',
   subtitle: 'Project Lead',
@@ -50,14 +58,7 @@ export const correlate: Project[] = [
   description: 'Collected and studied four months of self-reported data on various metrics \
   to determine how to statistically and objectively maximize personal happiness',
   buzzwords: 'Data Visualization, Python'},
-
-  { title: 'VR Sim Survey',
-  subtitle: 'Data Analyst',
-  image: '../../../assets/simSurvey.png',
-  description: 'Discovered discrepancies in playtime and avatar selection between genders \
-  by analyzing over 100 datalogs obtained from playtests, suggested actionable solutions',
-  buzzwords: 'Data Visualization, Python'},
-]
+];
 
 export const collaborate: Project[] = [
   { title: 'Game Dev Knights',
@@ -86,4 +87,4 @@ export const collaborate: Project[] = [
   buzzwords: 'Project Management, Unity3D',
   link: 'https://globalgamejam.org/2016/games/diet-exorcise'
   }
-]
+];

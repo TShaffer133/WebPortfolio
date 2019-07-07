@@ -4,11 +4,10 @@
       <h2 style="color:#26a69a; text-align: center; padding-bottom: 50px;">Here are a few of my favorites.</h2>
 </div>
 
-<div @enterAnim class="container-fluid code">
-  <div class="row gutters">
+<div @enterAnim class="container-fluid code d-md-flex">
     <div class="col-sm-6 col-md-6 col-lg-8">
       <h2 class="section-title">Code</h2>
-      <div class="row gutters align-items-end" style="padding-left: 50px">
+      <div class="row-eq-height">
         <div *ngFor="let project of code" class="col-sm-12 col-md-6 col-lg-4 project-card">
           <mat-card>
             <mat-card-title>{{project.title}}</mat-card-title>
@@ -30,33 +29,29 @@
         </div>
       </div>
     </div>
-
-    <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
-    <div class="col-sm-6 col-md-6 col-lg-4">
-        <mat-card class="sidebar-card">
-          <mat-card-title>
-            Core Competencies
-          </mat-card-title>
-          <mat-card-subtitle>
-            A Non-Exhaustive List
-          </mat-card-subtitle>
-          <div class="d-xs-block d-sm-block d-md-none">
-            <img mat-card-image src='../../../assets/skillsSm.png'/>
-          </div>
-          <div class="d-none d-md-block d-xl-none">
-            <img mat-card-image src='../../../assets/skills.png'/>
-          </div>
-          <div class="d-none d-xl-block">
-            <img mat-card-image src='../../../assets/skillsLg.png'/>
-          </div>
-        </mat-card>
-    </div>
+  <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
+  <div class="col-sm-6 col-md-6 col-lg-4">
+      <mat-card class="sidebar-card">
+        <mat-card-title>
+          Core Competencies
+        </mat-card-title>
+        <mat-card-subtitle>
+          A Non-Exhaustive List
+        </mat-card-subtitle>
+        <div class="d-xs-block d-sm-block d-md-none">
+          <img mat-card-image src='../../../assets/skillsSm.png'/>
+        </div>
+        <div class="d-none d-md-block d-xl-none">
+          <img mat-card-image src='../../../assets/skills.png'/>
+        </div>
+        <div class="d-none d-xl-block">
+          <img mat-card-image src='../../../assets/skillsLg.png'/>
+        </div>
+      </mat-card>
   </div>
 </div>
 
-<div @enterAnim *ngIf='showCorrelate' class="container-fluid correlate">
-    <div class="row gutters">
-
+<div @enterAnim *ngIf='showCorrelate' class="container-fluid correlate d-md-flex">
 <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
       <div class="d-none d-sm-block col-sm-6 col-md-6 col-lg-4">
         <mat-card class="sidebar-card right">
@@ -68,7 +63,7 @@
 
       <div class="col-sm-6 col-md-6 col-lg-8">
         <h2 class="section-title right">Correlate</h2>
-        <div class="row gutters align-items-end" style="padding-left: 50px">
+        <div class="row-eq-height">
           <div *ngFor="let project of correlate" class="col-sm-12 col-md-6 col-lg-4 project-card">
             <mat-card>
               <mat-card-title>{{project.title}}</mat-card-title>
@@ -96,23 +91,20 @@
 
       <!-- Mobile compatible placement of block -->
       <div class="d-block d-sm-none col-xs-6">
-        <mat-card class="sidebar-card right">
+        <mat-card class="project-card">
           <mat-card-title>Frameworks Breakdown</mat-card-title>
           <mat-card-subtitle>Some Tools I Have Used</mat-card-subtitle>
           <img mat-card-image src='../../../assets/frameworks.png' alt="BigBoyTest"/>
         </mat-card>
       </div>
-
-    </div>
 </div>
 
-<div @enterAnim *ngIf='showCollaborate' class="container-fluid collaborate">
-    <div class="row gutters">
+<div @enterAnim *ngIf='showCollaborate' class="container-fluid collaborate d-md-flex">
 
       <div class="col-sm-6 col-md-6 col-lg-8">
         <h2 class="section-title">Collaborate</h2>
 
-        <div class="row gutters align-items-end" style="padding-left: 50px">
+        <div class="row-eq-height">
           <div *ngFor="let project of collaborate" class="col-xs-12 col-md-6 col-lg-4 project-card">
             <mat-card>
               <mat-card-title>{{project.title}}</mat-card-title>
@@ -136,7 +128,6 @@
             </mat-card>
           </div>
         </div>
-
       </div>
 
 <!--- temp solution is just eyeballing pixels/adjusting height to match the grid. Need permanent solution --->
@@ -152,6 +143,4 @@
           </div>
         </mat-card>
       </div>
-
-    </div>
 </div>
