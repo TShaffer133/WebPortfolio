@@ -8,7 +8,7 @@ import {
   stagger,
 } from '@angular/animations';
 
-import { Project, code, correlate, collaborate} from './about.data'
+import { Project, code, correlate, collaborate} from './about.data';
 
 @Component({
   selector: 'abe-about',
@@ -30,21 +30,20 @@ export class AboutComponent implements OnInit {
   correlate: Project[] = correlate;
   collaborate: Project[] = collaborate;
 
-  showCorrelate = false
-  showCollaborate = false
+  showCorrelate = false;
+  showCollaborate = false;
 
   constructor(public el: ElementRef) { }
 
-//Implements show animation on scroll via hardcoded values. Alter to make dynamic.
+// Implements show animation on scroll via hardcoded values. Alter to make dynamic.
   @HostListener('window:scroll', ['$event'])
     checkScroll(){
-      const scrollPosition = window.pageYOffset
-
-      if(scrollPosition >= 300) {
-        this.showCorrelate = true
+      const scrollPosition = window.pageYOffset;
+      if (scrollPosition >= 300) {
+        this.showCorrelate = true;
       }
-      if(scrollPosition >= 1200) {
-        this.showCollaborate = true
+      if (scrollPosition >= 1200) {
+        this.showCollaborate = true;
       }
     }
 
